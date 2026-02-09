@@ -1,2 +1,2 @@
-# file: Procfile
+# Procfile
 web: gunicorn app:app
