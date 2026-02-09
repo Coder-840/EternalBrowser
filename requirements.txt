@@ -1,0 +1,4 @@
+# file: requirements.txt
+flask
+duckduckgo_search
+gunicorn
