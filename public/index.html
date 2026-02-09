@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Privacy Proxy</title></head>
+<body>
+    <h1>Anonymous View</h1>
+    <input type="text" id="urlInput" placeholder="Enter URL (e.g., google.com)">
+    <button onclick="visit()">Visit Anonymously</button>
+
+    <script>
+        function visit() {
+            const url = document.getElementById('urlInput').value;
+            // Ensure URL has a protocol
+            const finalUrl = url.startsWith('http') ? url : 'https://' + url;
+            window.location.href = `/proxy?url=${encodeURIComponent(finalUrl)}`;
+        }
+    </script>
+</body>
+</html>
