@@ -17,21 +17,28 @@ HOME_HTML = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Smart Proxy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EternalProxy</title>
     <style>
-        body { font-family: sans-serif; max-width: 600px; margin: 50px auto; text-align: center; background: #f4f4f4; }
-        .container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        input { padding: 12px; width: 70%; border: 1px solid #ccc; border-radius: 4px; }
-        button { padding: 12px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
-        button:hover { background: #0056b3; }
+        :root { --primary: #2563eb; --bg: #f8fafc; }
+        body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; color: #1e293b; }
+        .container { background: white; width: 100%; max-width: 480px; padding: 3rem; border-radius: 24px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border: 1px solid rgba(0,0,0,0.05); }
+        h1 { font-size: 2.25rem; font-weight: 800; margin-bottom: 2rem; letter-spacing: -0.025em; background: linear-gradient(to right, #2563eb, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .input-group { position: relative; display: flex; flex-direction: column; gap: 12px; }
+        input { font-size: 1rem; padding: 16px 20px; border: 2px solid #e2e8f0; border-radius: 12px; transition: all 0.2s; outline: none; }
+        input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1); }
+        button { font-size: 1rem; font-weight: 600; padding: 16px; background: var(--primary); color: white; border: none; border-radius: 12px; cursor: pointer; transition: transform 0.1s, background 0.2s; }
+        button:hover { background: #1d4ed8; transform: translateY(-1px); }
+        button:active { transform: translateY(0); }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🔒 Smart Session Proxy</h1>
-        <form action="/proxy" method="GET">
-            <input type="url" name="url" placeholder="https://google.com" required>
-            <button type="submit">Go</button>
+        <h1>EternalProxy</h1>
+        <form action="/proxy" method="GET" class="input-group">
+            <input type="url" name="url" placeholder="Paste your link here..." required>
+            <button type="submit">Access Securely</button>
         </form>
     </div>
 </body>
