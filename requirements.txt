@@ -1,4 +1,5 @@
-# file: requirements.txt
+# requirements.txt
 flask
-duckduckgo_search
+requests
+beautifulsoup4
 gunicorn
